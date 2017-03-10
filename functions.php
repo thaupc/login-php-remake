@@ -12,4 +12,10 @@ if (isset($_SESSION["customer_session"])){
     header("location: index.php");
 } 
 
+function clean_input($input){
+	$input = trim($input);
+	$input = stripslashes($input);
+	$input = htmlspecialchars($input);
+}
+
 ?>

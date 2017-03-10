@@ -40,7 +40,13 @@ require("functions.php");
 					<?php 
 						if(!empty($_POST)){
 							$username = $_POST["form-username"];
+
+							clean_input($username);
+
 							$password = $_POST["form-password"];
+
+							clean_input($password);
+
 							$d_pass = md5($password);
 
 							$sql = "select * from members where username = '$username' and password = '$d_pass'";

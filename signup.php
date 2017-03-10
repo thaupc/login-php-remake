@@ -94,7 +94,9 @@ require("functions.php");
 					<?php 
 						if(!empty($_POST)){
 								$n_username = $_POST["form_newname"];
+								clean_input($n_username);
 								$n_password = $_POST["form_newpass"];
+								clean_input($n_password);
 								$e_pass= md5($n_password);
 
 								if ($n_username == "" || $n_password == "") {
