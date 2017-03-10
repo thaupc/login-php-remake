@@ -77,6 +77,9 @@ require("functions.php");
 					        form.form_newpass.focus();
 					        return false;
 					      }
+
+					      if(document.getElementById('agree').checked) { return true; } else { alert('Make sure you agree with Terms and Conditions'); return false; }
+
 					    } else {
 					      alert("Error: Please check that you've entered and confirmed your password!");
 					      form.form_newpass.focus();
@@ -131,7 +134,14 @@ require("functions.php");
 				<div class="form-group">
 					<label for="">Password</label>
 					<input type="password" name="form_newpass2" class="form-control" id="" placeholder="Reenter password">
-				</div>			
+				</div>
+
+				<div class="form-group">
+					<label for="">Terms and Conditions: </label>
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. A blanditiis quidem voluptatem, non magnam in fugiat, dicta, deserunt aut ab dolorem debitis voluptatibus quis minima aspernatur consectetur pariatur beatae repellat!
+						<br>
+					<input type="checkbox" name="checkbox" value="check" id="agree"> I read and agreed.
+				</div>
 
 				<div class="row">
 					<div class="col-md-4">
